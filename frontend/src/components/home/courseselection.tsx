@@ -1,4 +1,28 @@
 import { CoursesSelectionStyles } from "./styles/courseselection"
+const options2 = {
+    items: 5,
+    stagePadding: 10,
+    nav: true,
+    dots: false,
+    margin: 30,
+    navText: ["<", ">"],
+    width: "100%",
+    slideBy: 5,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        460: {
+            items: 2,
+        },
+        760: {
+            items: 3,
+        },
+        1024: {
+            items: 5,
+        },
+    },
+};
 
 const CoursesSelection = () => {
     return (
@@ -19,6 +43,7 @@ const CoursesSelection = () => {
                     {/* tab selection */}
                     <div className="w-100"></div>
                     <div className="course_wrapper flex column gap-1">
+                        
                         <div className="w-100 flex column gap-1">
                             <h3 className="fs-24 text-extra-bold">Expand your career opportunities with Python
                                 <span style={{ maxWidth: "60%", paddingTop: "1.6rem" }} className="fs-18 block text-grey text-light">JavaScript is a text-based computer programming language used to make dynamic web pages. A must-learn for aspiring web developers or programmers, JavaScript can be used for features like image carousels, displaying countdowns and timers, and playing media on a webpage. With JavaScript online classes, you can learn to build</span>

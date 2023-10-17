@@ -1,24 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Roboto:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100;200;300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @font-face {
-  font-family: "CustomFont_Medium";
-  src: url("./assets/ClashDisplay-Bold.otf") format("opentype");
+  font-family: "Sussie";
+  src: url("./assets/SuisseWorks-Bold-v1.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "CustomFont_Bold";
-  src: url("./assets/FontsFree-Net-Segoe-UI-Bold.ttf") format("truetype");
+  font-family: "Udemy_Sans_Bold";
+  src: url("./assets/Udemy-Sans-Bold-v1.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "CustomFont_Normal";
-  src: url("./assets/FontsFree-Net-Segoe-UI.ttf") format("truetype");
+  font-family: "Udemy_Sans_Light";
+  src: url("./assets/Udemy-Sans-Regular-v1.ttf") format("truetype");
 }
-
-
-
 
 * {
   text-decoration: none;
@@ -34,56 +28,31 @@
   box-sizing: border-box;
 }
 :root {
-  --grey-1: rgb(113, 118, 123);
-  --grey-3:rgb(83, 100, 113);
-  --dark-1: rgb(0, 0, 0);
-  --primary: #e4c590;
-  --background_2: #0e0d0c;
-  --blue-1: rgb(29, 155, 240);
-  --grey-2: rgb(239, 243, 244);
-  --white: #fff;
-  --border: rgba(0, 0, 0, 0.1);
-  --dark-grey: rgb(15, 20, 25);
-  --top: rgba(255, 255, 255, 0.65);
-  --dark-grey-hover: #f9f9f9d3;
-  --grey-hover: #d0d0d0;
-  --backdrop: rgba(0, 0, 0, 0.5);
+  --dark-1: #101112;
+  --dark-2: rgb(28, 29, 31);
+  --grey-1: rgb(45, 47, 49);
+  --grey-2: #e4e8eb;
+  --grey-3: #f7f9fa;
+  --red-1: #612012;
+  --red-2: #b32d0f;
+  --blue-1: rgb(24, 10, 61);
+  --blue-2: #371783;
+  --blue-3: #5624d0;
+  --orange-1: #b4690e;
+  --green-1: #1e6055;
+  --green-2: #19a38c;
+  --shadow:0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
 }
-/* :root {
-  --white: rgb(0, 0, 0);
-  --grey-3:#eff3f4;
-
-  --dark-1: #eff3f4;
-  --dark-grey: #eff3f4;
-  --dark-grey-hover: #f9f9f90f;
-  --grey-hover: #f9f9f90f;
-  --grey-2: #202327;
-  --grey-1: rgb(113, 118, 123);
-  --border: rgba(255, 255, 255, 0.11);
-  --top:rgba(0, 0, 0, 0.65);
-  --backdrop:(0, 0, 0, 0.65);
-
-} */
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--white);
-  font-family: "CustomFont_Normal", sans-serif;
-  font-weight: 400;
-  line-height: 20px;
+  background-color: #fff;
+  /* font-family: "Udemy_Sans_Light", sans-serif; */
+  font-weight: lighter;
+  line-height: 26px;
   color: var(--dark-1);
-  /* letter-spacing: .4px; */
-}
-.r-8kz0gk {
-  height: 2rem !important;
-}
-.r-1cvl2hr {
-  color: rgb(29, 155, 240) !important;
-}
-.r-lrsllp {
-  width: 24px !important;
 }
 
 /* Nunito css */
@@ -95,9 +64,12 @@ body {
 }
 
 .family1 {
-  font-family:  sans-serif;
+  font-family:Sussie, sans-serif;
 }
 
+.background {
+  background-color: var(--grey-3);
+}
 .shadow {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
@@ -107,13 +79,16 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+
 h1 {
   font-size: 70px;
   line-height: 84px;
   font-weight: normal;
 }
 h2 {
-  font-size: 45px;
+  font-size: 32px;
+  font-family: Sussie, sans-serif !important;
+  line-height: 40px;
 }
 .flex-wrap {
   flex-wrap: wrap;
@@ -124,48 +99,22 @@ h2 {
   outline: none;
   cursor: pointer;
   transition: all 0.4s ease;
-  background-color: #1d9bf0;
   z-index: 300;
-  border-radius: 40px;
   text-align: center;
-  padding: 1.7rem 3rem;
-  opacity: 1;
-}
-.btn.btn-2 {
-  opacity: 0.9;
-}
-.btn.btn-3 {
-  background-color: #000;
-  padding: 1rem 2rem;
-  opacity: 1;
-}
-.btn.btn-2:hover {
-  opacity: 1;
-}
-.btn.btn-3:hover {
-  opacity: 0.7;
+  padding: 1.4rem 2rem;
+  background-color: var(--dark-1);
+  color: #fff;
+  opacity: .9;
+  cursor: pointer;
 }
 .btn:hover {
-  opacity: 1;
+  opacity: .7;
 }
-.text_secondary {
-  color: var(--primary) !important;
-}
-
-.text_dark_grey {
-  color: var(--dark-grey);
-}
-.text-white {
-  color: #fff;
+.btn.btn-1 {
+  background-color: #fff;
+  color: var(--dark-1);
 }
 
-.text-blue {
-  color: var(--blue-1);
-}
-
-.text-dark-green {
-  color: var(--dark-green);
-}
 .icon {
   width: 6rem;
   height: 6rem;
@@ -200,28 +149,6 @@ button {
   outline: none;
   font-family: inherit;
   background-color: transparent;
-}
-.gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    #000000 40%,
-    hsla(0, 0%, 0%, calc(100% - 40%)) 100%
-  );
-  z-index: 300;
-}
-.gradient2 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    #000000 12%,
-    hsla(0, 0%, 0%, calc(100% - 45%)) 100%
-  );
-  z-index: 300;
 }
 
 .text-grey {
@@ -305,20 +232,18 @@ button {
 }
 
 .text-extra-bold {
-  font-family: "CustomFont_Bold", sans-serif;
-  font-weight: 700;
+  font-family: Udemy_Sans_Bold, sans-serif;
+  font-weight: bolder;
 }
 
 .text-bold {
-  font-weight: 600;
-  font-family: "CustomFont_Bold", sans-serif;
-
+  font-weight: bold;
+  font-family: Udemy_Sans_Bold, sans-serif;
 }
 
 .text-light {
-  font-family: "CustomFont_Normal", sans-serif;
-
-  font-weight: 500;
+  font-family: Udemy_Sans_Light, sans-serif;
+  font-weight: 400;
 }
 
 .radius1 {
@@ -486,6 +411,9 @@ button {
 .fs-12 {
   font-size: 12px;
 }
+.fs-13 {
+  font-size: 13px;
+}
 
 .fs-10 {
   font-size: 10px;
@@ -501,6 +429,9 @@ button {
 
 .fs-18 {
   font-size: 18px;
+}
+.absolute {
+  position: absolute;
 }
 
 .avatar {
@@ -543,17 +474,17 @@ button {
 
 .w-70 {
   width: 70%;
-  max-width: 1390px;
+  max-width: 134rem;
 }
 
 .w-85 {
   width: 86%;
-  max-width: 1390px;
+  max-width: 134rem;
 }
 
 .w-90 {
   width: 95%;
-  max-width: 1390px;
+  max-width: 134rem;
 }
 
 .w-100 {

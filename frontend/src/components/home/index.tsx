@@ -7,6 +7,7 @@ import Testimony from './testimony';
 import Categories from './categories';
 import Bussiness from './business';
 import Owner from './owner';
+import Learners from './learners';
 
 const Home: React.FC = () => {
     return (
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
           <Banner/>
           <CoursesSelection/>
           <Testimony/>
+        <Learners/>
           <Categories/>
           <Bussiness/>
           <Owner/>

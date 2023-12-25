@@ -10,18 +10,18 @@ import Owner from './owner';
 import Learners from './learners';
 
 const Home: React.FC = () => {
-    return (
-        <HomeStyles>
-          <Hero/>
-          <Banner/>
-          <CoursesSelection/>
-          <Testimony/>
-        <Learners/>
-          <Categories/>
-          <Bussiness/>
-          <Owner/>
-        </HomeStyles>
-    )
+  return (
+    <HomeStyles>
+      <Hero />
+      <Banner />
+      <CoursesSelection />
+      <Testimony />
+      <Learners />
+      <Categories />
+      <Bussiness />
+      <Owner />
+    </HomeStyles>
+  )
 }
 
 const HomeStyles = styled.div`

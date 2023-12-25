@@ -161,6 +161,9 @@ button {
   /* color: var(--grey-1); */
   color: var(--grey-1);
 }
+.text-white {
+  color:#Fff;
+}
 
 .text-grey2 {
   color:rgb(106, 111, 115);

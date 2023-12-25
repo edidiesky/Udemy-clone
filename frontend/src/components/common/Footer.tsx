@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="w-90 auto flex item-center justify-space gap-1">
-                <img style={{width:"auto"}} src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="" className="" />
+                <img style={{width:"100px"}} src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="" className="" />
                 <h5 className="fs-12 text-light text-white">© 2023 Cdemy, Inc</h5>
             </div>
         </FooterStyles>

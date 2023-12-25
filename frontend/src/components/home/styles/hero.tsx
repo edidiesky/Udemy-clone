@@ -4,6 +4,8 @@ export const HeroStyles = styled.div`
   min-height: 40rem;
   width: 100%;
   position: relative;
+    z-index:100;
+
   .hero_Wrapper{
     position: absolute;
     transition: all 1s;

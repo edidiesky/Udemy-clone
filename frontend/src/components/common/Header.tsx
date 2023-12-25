@@ -95,6 +95,11 @@ export const HeaderStyles = styled.div`
     .cart_icon{
         cursor:pointer;
     }
+    h5 {
+        @media (max-width:780px) {
+            display:none;
+        }
+    }
     .cart_wrapper:hover  .cart_dropdown {
             opacity:1;
             transform:scale(1);

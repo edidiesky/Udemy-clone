@@ -64,7 +64,7 @@ body {
 }
 
 .family1 {
-  font-family:Sussie, sans-serif;
+  font-family:"Sussie", sans-serif;
 }
 
 .background {
@@ -173,6 +173,10 @@ button {
   color: var(--dark-1);
 }
 
+.text-blue {
+  color:var(--blue-3);
+}
+
 .back-grey {
   background-color: var(--light-grey);
 }
@@ -241,17 +245,17 @@ button {
 }
 
 .text-extra-bold {
-  font-family: Udemy_Sans_Bold, sans-serif;
+  font-family: "Udemy_Sans_Bold", sans-serif;
   font-weight: bolder;
 }
 
 .text-bold {
   font-weight: bold;
-  font-family: Udemy_Sans_Bold, sans-serif;
+  font-family: "Udemy_Sans_Bold", sans-serif;
 }
 
 .text-light {
-  font-family: Udemy_Sans_Light, sans-serif;
+  font-family: "Udemy_Sans_Light", sans-serif;
   font-weight: 400;
 }
 

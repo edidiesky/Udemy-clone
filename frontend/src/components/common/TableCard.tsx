@@ -10,8 +10,7 @@ type TableCardProps = {
     type?: any;
 }
 const TableCard: React.FC<TableCardProps> = ({ x, type }) => {
-    let createddate = moment(x?.createdAt);
-    createddate = createddate.format("MMMM Do YYYY");
+    let createddate = moment(x?.createdAt).format("MMMM Do YYYY");
     const navigate = useNavigate();
 
     // // delete product function
@@ -135,7 +134,7 @@ const TableCard: React.FC<TableCardProps> = ({ x, type }) => {
                 <td>{x?._id}</td>
                 <td>
                     <div className="flex item-center gap-1">
-                        {x?.image && <img style={{ width: "120px" }} src={x?.image} alt="images" />}
+                        {x?.image && <img style={{ width: "140px" }} src={x?.image} alt="images" />}
                         <span className="fs-16 text-extra-bold text-dark">
                             {x?.title}
                             <span className="block text-light fs-12">{x?.tutor}</span>
@@ -149,10 +148,10 @@ const TableCard: React.FC<TableCardProps> = ({ x, type }) => {
                 </td>
 
                 <td>
-                    <span className="text-blue fs-16 text-bold">Remove</span>
+                    <span className="text-blue fs-16 text-light">Remove</span>
                 </td>
                 <td>
-                    <span className="fs-16 text-extra-bold block text-grey">${x?.price}</span>
+                    <span className="fs-18 text-extra-bold block text-blue text-grey">${x?.price}</span>
 
                 </td>
             </tr>

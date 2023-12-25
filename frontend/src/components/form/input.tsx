@@ -7,7 +7,7 @@ const InputTextField = styled(TextField)(({ theme }) => ({
     borderRadius: '4px',
     backgroundColor: 'var(--white)',
     border: '1px solid var(--border)',
-    fontFamily: "CustomFont_Normal, sans- serif",
+    fontFamily: "Udemy_Sans_Bold, sans- serif",
 
 
     '& fieldset': {
@@ -27,7 +27,7 @@ const InputTextField = styled(TextField)(({ theme }) => ({
     padding: '18px 10px',
     fontSize: '16px',
     fontWeight: 'light',
-    fontFamily: "CustomFont_Normal, sans- serif",
+    fontFamily: "Udemy_Sans_Bold, sans- serif",
 
     color: "var(--dark-1)"
 

@@ -5,6 +5,7 @@ import {
   Auth,
   Home,
   LayoutIndex,
+  Cart
 } from "./screens";
 import ProtectRoute from "./utils/ProtectRoute";
 import Preloader from "./components/loaders/preloader";
@@ -19,6 +20,14 @@ export default function App() {
           <Route index element={<Suspense fallback={<LazyLoader />}>
             <ProtectRoute>
               <Home />
+            </ProtectRoute>
+          </Suspense>
+          }
+          />
+
+          <Route path={'cart/'} element={<Suspense fallback={<LazyLoader />}>
+            <ProtectRoute>
+              <Cart />
             </ProtectRoute>
           </Suspense>
           }

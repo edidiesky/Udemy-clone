@@ -2,12 +2,14 @@
 
 import React, { useEffect, useRef } from 'react';
 import { styled } from 'styled-components';
-import Home from '../components/home';
+import Cart from '../components/cart';
 import Footer from '../components/common/Footer';
-const HomeIndex: React.FC = () => {
+import Header from '../components/common/Header';
+const CrtIndex: React.FC = () => {
   return (
     <HomeStyles>
-      <Home />
+      <Header/>
+      <Cart />
       <Footer />
     </HomeStyles>
   )
@@ -19,4 +21,4 @@ const HomeStyles = styled.div`
   position: relative;
 `
 
-export default HomeIndex
+export default CrtIndex

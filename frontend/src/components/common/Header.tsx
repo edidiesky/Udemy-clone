@@ -90,11 +90,11 @@ const Header = () => {
                                     </div>
 
                                     <div className="flex profile_dropdown_bottom column w-100 gap-1">
-                                        <span className="text-light fs-14 w-100 profile_list text-grey block">My Learning</span>
-                                        <span className="text-light fs-14 w-100 profile_list text-grey block">My Cart</span>
-                                        <span className="text-light fs-14 w-100 profile_list text-grey block">My wishlist</span>
-                                        <span className="text-light fs-14 w-100 profile_list text-grey block">Account Settings</span>
-                                        <span className="text-light fs-14 w-100 profile_list text-grey block">Instructor Dashboard</span>
+                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">My Learning</span>
+                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">My Cart</span>
+                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">My wishlist</span>
+                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">Account Settings</span>
+                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">Instructor Dashboard</span>
 
                                     </div>
                                 </div>
@@ -143,6 +143,13 @@ export const HeaderStyles = styled.div`
     .profile_list{
           padding:.7rem 2rem;
         border-bottom:1px solid rgba(0,0,0,.1);
+            transition:all .3s;
+            &:nth-last-child() {
+               border-bottom:none;
+            }
+        &:hover {
+            color:var(--blue-2);
+        }
     }
     .profile_avatar_large {
     width:70px;
@@ -171,7 +178,7 @@ export const HeaderStyles = styled.div`
         z-index:220;
         background:#fff;
         padding:1rem 0;
-        top:200%;
+        top:170%;
         right:40%;
         .profile_card{
             padding:1.7rem 1.5rem;

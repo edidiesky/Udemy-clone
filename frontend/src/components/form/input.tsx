@@ -4,10 +4,9 @@ import { styled } from '@mui/material/styles';
 
 const InputTextField = styled(TextField)(({ theme }) => ({
   '& .MuiOutlinedInput-root': {
-    borderRadius: '4px',
-    backgroundColor: 'var(--white)',
-    border: '1px solid var(--border)',
-    fontFamily: "Udemy_Sans_Bold, sans- serif",
+    backgroundColor: '#fFF',
+    border: '1px solid rgba(0,0,0,1)',
+    fontFamily: "'Udemy_Sans_Bold', sans-serif",
 
 
     '& fieldset': {
@@ -20,76 +19,40 @@ const InputTextField = styled(TextField)(({ theme }) => ({
       borderColor: 'transparent',
     },
     '&.Mui-focused ': {
-      border: '2px solid var(--blue-1)',
+      border: '2px solid rgba(0,0,0,1)',
     },
   },
   '& .MuiOutlinedInput-input': {
-    padding: '18px 10px',
-    fontSize: '16px',
-    fontWeight: 'light',
-    fontFamily: "Udemy_Sans_Bold, sans- serif",
-
-    color: "var(--dark-1)"
+    fontSize: '15px',
+    marginTop:"10px",
+    fontWeight: 'medium',
+    fontFamily: "'Udemy_Sans_Bold', sans-serif",
 
   },
   '& .MuiInputLabel-root': {
-    fontSize: '16px',
-    fontWeight: 'light',
-    color: 'var(--dark-1)'
+    fontSize: '15px',
+    fontWeight: 'bold',
+    color: 'var(--dark-1)',
+    fontFamily: "'Udemy_Sans_Bold', sans-serif",
+
   },
   '& .MuiInputLabel-root.Mui-focused': {
-    // Styles when the form is focused
-    color: 'var(--blue-1)',
-    fontWeight: 'light',
+    fontWeight: 'bold',
   },
   '& .MuiInputLabel-shrink': {
-    transform: 'translate(12px, 7px) scale(0.7)',
-    color: 'var(--blue-1)', fontWeight: "normal"
+    transform: 'translate(12px, 7px) scale(0.8)',
+    fontWeight: "normal"
   },
 }));
 
-type EditInput = {
-  types?: String
-}
 
-// Define the prop type for the setState function
-type SetStateProp<T> = React.Dispatch<React.SetStateAction<T>>
-
-type EditInputTypes = {
-  state?: string;
-  label?: string;
-  type?: string;
-  setState?: (val: string) => void;
-  // bio?: string;
-  // setBio?: SetStateProp<string>;
-  // location?: string;
-  // setLocation?: SetStateProp<string>;
-  // website?: string;
-
-
-
-  // setWebsite?: SetStateProp<string>;
-};
-
-type FormInputProps = EditInput & EditInputTypes;
-
-
-const FormInput: React.FC<FormInputProps> = ({ types, type, setState, state, label }) => {
-  const handleFormInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (setState) {
-      setState(e.target.value);
-    }
-  }
+const FormInput= ({ ...props }) => {
 
   return (
     <InputTextField
-      label={label}
-      type={type}
+      {...props}
       variant="outlined"
       fullWidth
-      value={state}
-      onChange={handleFormInput}
-      multiline={types === 'textarea'}
     />
   );
 };

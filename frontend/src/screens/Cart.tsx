@@ -5,7 +5,7 @@ import { styled } from 'styled-components';
 import Cart from '../components/cart';
 import Footer from '../components/common/Footer';
 import Header from '../components/common/Header';
-const CrtIndex: React.FC = () => {
+const CartIndex: React.FC = () => {
   return (
     <HomeStyles>
       <Header/>
@@ -21,4 +21,4 @@ const HomeStyles = styled.div`
   position: relative;
 `
 
-export default CrtIndex
+export default CartIndex

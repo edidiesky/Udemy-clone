@@ -5,7 +5,9 @@ import {
   Auth,
   Home,
   LayoutIndex,
-  Cart
+  Cart,
+  Login,
+  Register
 } from "./screens";
 import ProtectRoute from "./utils/ProtectRoute";
 import Preloader from "./components/loaders/preloader";
@@ -28,6 +30,24 @@ export default function App() {
           <Route path={'cart/'} element={<Suspense fallback={<LazyLoader />}>
             <ProtectRoute>
               <Cart />
+            </ProtectRoute>
+          </Suspense>
+          }
+          />
+
+          {/* login */}
+          <Route path={'login/'} element={<Suspense fallback={<LazyLoader />}>
+            <ProtectRoute>
+              <Login />
+            </ProtectRoute>
+          </Suspense>
+          }
+          />
+
+          {/* login */}
+          <Route path={'register/'} element={<Suspense fallback={<LazyLoader />}>
+            <ProtectRoute>
+              <Register />
             </ProtectRoute>
           </Suspense>
           }

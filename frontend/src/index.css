@@ -116,10 +116,12 @@ h2 {
   border:2px solid var(--dark-1);
 
 }
-.btn.btn-1:hover {
-  background-color: #e4e8eb;
-  opacity: 1;
+.btn.btn-2 {
+  background-color: #A435F0;
+  padding: 1.5rem 2rem;
+
 }
+
 
 .icon {
   width: 6rem;

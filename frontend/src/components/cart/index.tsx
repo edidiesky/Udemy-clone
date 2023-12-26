@@ -13,7 +13,7 @@ const Cart: React.FC = () => {
           Shopping Cart
         </h1>
         {/* cart */}
-        <div className="cart_wrapper w-100 py-4">
+        <div className={`cart_wrapper ${courses.length !== 0? 'active':""} w-100 py-4`}>
           <div className="flex column">
             <div className="cart_wrapper_top fs-16 text-extra-bold text-grey">4 Courses in Cart</div>
             {
@@ -42,13 +42,16 @@ const Cart: React.FC = () => {
 
           </div>
           {/* right checkout */}
-          <div className="flex w-100 column gap-2">
-            <div className="flex column gap-2">
-              <h5 className="fs-16 text-extra-bold text-grey">Total:</h5>
-              <h3 className="fs-35 text-extra-bold">₦139,600</h3>
+          {
+            courses.length === 0 && <div className="flex w-100 column gap-2">
+              <div className="flex column gap-2">
+                <h5 className="fs-16 text-extra-bold text-grey">Total:</h5>
+                <h3 className="fs-35 text-extra-bold">₦139,600</h3>
+              </div>
+              <button className="fs-16 btn text-bold text-white">Checkout</button>
             </div>
-            <button className="fs-16 btn text-bold text-white">Checkout</button>
-          </div>
+          }
+         
         </div>
 
         {/* wishlist */}
@@ -102,6 +105,10 @@ h1 {
   display:grid;
   grid-template-columns:1fr 26%;
   grid-gap:4rem;
+  &.active{
+  grid-template-columns:1fr;
+
+  }
   @media (max-width:880px) {
     
   grid-template-columns:1fr;

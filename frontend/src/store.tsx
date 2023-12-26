@@ -1,14 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import authSlice from './features/auth/authSlice'
-import tweetSlice  from './features/tweet/tweetSlice'
 // ...
 
 export const store = configureStore({
   reducer: {
     auth: authSlice,
-    tweet: tweetSlice,
-    // comments: commentsReducer,
-    // users: usersReducer,
   },
 })
 

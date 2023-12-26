@@ -18,16 +18,9 @@ type InputData = {
 };
 
 const Register: React.FC = () => {
-    const [formdata, setFormData] = useState({
-        email: "",
-        password: "",
-        name:""
-    });
-
-
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData({ ...formdata, [e.target.name]: e.target.value });
-    };
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
 
     return (
         <HomeStyles className='flex column'>
@@ -46,20 +39,9 @@ const Register: React.FC = () => {
                                 <FaFacebook fontSize={'36px'} />
                                 Continue with Facebook</div>
                             <div className="w-100 flex column gap-1">
-                                {inputData2.map((input: InputData) => {
-                                    return (
-                                        <FormInput
-                                            label={input.text}
-                                            onChange={(e) => onChange(e)}
-                                            type={input.type}
-                                            name={input.name}
-                                            value={formdata[input.name]}
-                                            input={input}
-                                            key={input.id}
-                                            required={input.required}
-                                        />
-                                    );
-                                })}
+                                <FormInput required={true} value={name} label={'Name'} onChange={(e:React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)} />
+                                <FormInput required={true} value={email} label={'Email'} onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} />
+                                <FormInput required={true} value={password} label={'Password'} onChange={(e:React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} />
                             </div>
                         </div>
                         <button className="w-100 text-center gap-2 btn btn-2 fs-16 text-bold">

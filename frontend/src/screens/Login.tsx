@@ -8,22 +8,14 @@ import { Link } from 'react-router-dom';
 import { inputData } from "../data/formdata";
 import FormInput from "../components/form/input";
 const Login: React.FC = () => {
-    const [formdata, setFormData] = useState({
-        email: "edidie@gmail.com",
-        password: "",
-    });
-
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     useEffect(() => {
-        setFormData({
-            email: "edidie@gmail.com",
-            password: "eAdg145%1",
-        });
-    }, [setFormData]);
+        setEmail("edidie@gmail.com")
+        setPassword("eAdg145%1")
+    }, [setEmail, setPassword]);
 
-    const onChange = (e) => {
-        setFormData({ ...formdata, [e.target.name]: e.target.value });
-    };
 
     return (
         <HomeStyles className='flex column'>
@@ -42,20 +34,9 @@ const Login: React.FC = () => {
                                 <FaFacebook fontSize={'36px'} />
                                 Continue with Facebook</div>
                             <div className="w-100 flex column gap-2">
-                                {inputData.map((input: { name: any, id: number, required: boolean, text: string, type: string }) => {
-                                    return (
-                                        <FormInput
-                                            label={input.text}
-                                            onChange={(e) => onChange(e)}
-                                            type={input.type}
-                                            name={input.name}
-                                            value={formdata[input.name]}
-                                            input={input}
-                                            key={input.id}
-                                            required={input.required}
-                                        />
-                                    );
-                                })}
+                                <FormInput required={true} value={email} label={'Email'} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} />
+                                <FormInput required={true} value={password} label={'Password'} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} />
+
                             </div>
                         </div>
                         <button className="w-100 text-center gap-2 btn btn-2 fs-16 text-bold">

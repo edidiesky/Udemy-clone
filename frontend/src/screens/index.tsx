@@ -1,6 +1,7 @@
 
 import { lazy } from 'react';
 
+const Teaching = lazy(() => import("./Teaching"));
 const Home = lazy(() => import("./Home"));
 const Cart = lazy(() => import("./Cart"));
 const Login = lazy(() => import("./Login"));
@@ -11,7 +12,8 @@ export {
     LayoutIndex,
     Cart,
     Login,
-    Register
+    Register,
+    Teaching
     // SingleIndex,
     // ShopIndex
 }

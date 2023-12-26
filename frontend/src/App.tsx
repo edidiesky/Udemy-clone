@@ -6,7 +6,8 @@ import {
   LayoutIndex,
   Cart,
   Login,
-  Register
+  Register,
+  Teaching
 } from "./screens";
 import ProtectRoute from "./utils/ProtectRoute";
 import Preloader from "./components/loaders/preloader";
@@ -25,10 +26,16 @@ export default function App() {
           </Suspense>
           }
           />
-
           <Route path={'cart/'} element={<Suspense fallback={<LazyLoader />}>
             <ProtectRoute>
               <Cart />
+            </ProtectRoute>
+          </Suspense>
+          }
+          />
+          <Route path={'teaching/'} element={<Suspense fallback={<LazyLoader />}>
+            <ProtectRoute>
+              <Teaching />
             </ProtectRoute>
           </Suspense>
           }

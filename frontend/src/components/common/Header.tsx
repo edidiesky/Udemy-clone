@@ -90,11 +90,13 @@ const Header = () => {
                                     </div>
 
                                     <div className="flex profile_dropdown_bottom column w-100 gap-1">
-                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">My Learning</span>
-                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">My Cart</span>
-                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">My wishlist</span>
-                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">Account Settings</span>
-                                        <span className="text-bold fs-14 w-100 profile_list text-grey block">Instructor Dashboard</span>
+                                        <span className="text-light fs-14 w-100 profile_list text-grey block">My Learning</span>
+                                        <span className="text-light fs-14 w-100 profile_list text-grey block">My Cart</span>
+                                        <span className="text-light fs-14 w-100 profile_list text-grey block">My wishlist</span>
+                                        <span className="text-light fs-14 w-100 profile_list text-grey block">Account Settings</span>
+                                        <span className="text-light fs-14 w-100 profile_list text-grey block">Profile</span>
+                                        <span className="text-light fs-14 w-100 profile_list text-grey block">Log Out</span>
+                                        <span className="text-light fs-14 w-100 profile_list text-grey block">Instructor Dashboard</span>
 
                                     </div>
                                 </div>
@@ -144,6 +146,8 @@ export const HeaderStyles = styled.div`
           padding:.7rem 2rem;
         border-bottom:1px solid rgba(0,0,0,.1);
             transition:all .3s;
+            cursor:pointer;
+
             &:nth-last-child() {
                border-bottom:none;
             }
@@ -179,10 +183,11 @@ export const HeaderStyles = styled.div`
         background:#fff;
         padding:1rem 0;
         top:170%;
-        right:40%;
+        right:0%;
         .profile_card{
             padding:1.7rem 1.5rem;
             border-bottom:1px solid rgba(0,0,0,.1);
+            cursor:pointer;
         }
     }
     .cart_wrapper:hover  .cart_dropdown {

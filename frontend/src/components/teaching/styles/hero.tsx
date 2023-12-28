@@ -41,6 +41,10 @@ export const HeroStyles = styled.div`
       @media (max-width:780px) {
         width:70%;
       }
+
+      @media (max-width:580px) {
+        width:90%;
+      }
     }
   }
    .btnArrow {

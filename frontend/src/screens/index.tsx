@@ -6,6 +6,7 @@ const Home = lazy(() => import("./Home"));
 const Cart = lazy(() => import("./Cart"));
 const Login = lazy(() => import("./Login"));
 const Register = lazy(() => import("./Register"));
+import User from './User'
 import LayoutIndex from './Layout'
 export {
     Home,
@@ -13,7 +14,8 @@ export {
     Cart,
     Login,
     Register,
-    Teaching
+    Teaching,
+    User
     // SingleIndex,
     // ShopIndex
 }

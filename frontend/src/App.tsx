@@ -10,7 +10,8 @@ import {
   TeachingExperience,
   User,
   OnBoardingLayout,
-  VideoExperience
+  VideoExperience,
+  Audience
 } from "./screens";
 import ProtectRoute from "./utils/ProtectRoute";
 import Preloader from "./components/loaders/preloader";
@@ -78,6 +79,12 @@ export default function App() {
           <Route path={'video-experience'} element={
             <ProtectRoute>
               <VideoExperience />
+            </ProtectRoute>
+          } />
+
+          <Route path={'existing-audience'} element={
+            <ProtectRoute>
+              <Audience />
             </ProtectRoute>
           } />
         </Route>

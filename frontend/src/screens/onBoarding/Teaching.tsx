@@ -29,7 +29,7 @@ const TeachingExperience = () => {
                 </div>
                 {/* options */}
 
-                <div className="w-85 grid grid-2 item-center gap-4">
+                <div style={{ gridGap: "6rem" }} className="w-85 grid grid-2 item-center grid-gap-4">
                     <div className="flex column gap-2">
                         <h4 className="fs-20 text-bold">What kind of teaching have you done before?</h4>
                         <div className="flex column gap-1">

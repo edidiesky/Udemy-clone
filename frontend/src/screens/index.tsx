@@ -7,6 +7,7 @@ const Register = lazy(() => import("./Register"));
 import User from './User'
 import TeachingExperience from './onBoarding/Teaching'
 import VideoExperience from './onBoarding/VideoExperience'
+import Audience from './onBoarding/Audience'
 import LayoutIndex from './Layout'
 import OnBoardingLayout from './OnBoardingLayout'
 export {
@@ -18,7 +19,8 @@ export {
     User,
     OnBoardingLayout,
     TeachingExperience,
-    VideoExperience
+    VideoExperience,
+    Audience
     // SingleIndex,
     // ShopIndex
 }

@@ -8,7 +8,7 @@ const OnBoardingFooter = () => {
 
         <HeaderStyles className="w-100 flex column gap-2">
             <div className="w-90 auto Header_wrapper flex item-center justify-space">
-                
+
                 <div className="flex item-center gap-2">
                     <button className="fs-16 btn text-bold text-white">Continue</button>
                 </div>
@@ -27,7 +27,7 @@ export const HeaderStyles = styled.div`
     position:fixed;
     bottom:0;
     left:0;
-
+border-top:1px solid rgba(0,0,0,.1);
 `;
 
 

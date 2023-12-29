@@ -595,7 +595,7 @@ html {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 680px) {
   h1 {
     font-size: 6rem;
     line-height: 50px;
@@ -628,6 +628,9 @@ html {
   .w-50 {
     width: 90%;
   }
+  .grid-2 {
+  grid-template-columns: 1fr;
+}
 }
 
 @media (max-width: 380px) {

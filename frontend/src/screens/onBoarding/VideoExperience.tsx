@@ -1,21 +1,21 @@
 import React, {useState} from 'react'
-const TeachingExperience = () => {
+const VideoExperience = () => {
     const experienceDataList = [
         {
             id:1,
-            text:"In Person formally"
+            text:"I am a beginner"
         },
         {
             id: 2,
-            text: "In Person, Professionally"
+            text: "I have some knowledge"
         },
         {
             id:3,
-            text:"Online"
+            text:"I am experienced"
         },
         {
             id: 4,
-            text: "Other"
+            text: "I have videos to upload"
         }
     ]
     return (
@@ -23,9 +23,11 @@ const TeachingExperience = () => {
             <div className="w-90 auto py-4 flex column gap-4">
                 <div className="flex column gap-2">
                     <h2 className="fs-45 text-dark">
-                        Share your knowledge
+                        Create a course
                     </h2>
-                    <span className="fs-16 w-50 text-light text-grey">Udemy courses are video-based experiences that give students the chance to learn actionable skills. Whether you have experience teaching, or it’s your first time, we’ll help you package your knowledge into an online course that improves student lives.</span>
+                    <span className="fs-16 w-50 text-light text-grey">
+                        Over the years we’ve helped thousands of instructors learn how to record at home. No matter your experience level, you can become a video pro too. We’ll equip you with the latest resources, tips, and support to help you succeed.
+                    </span>
                 </div>
                 {/* options */}
 
@@ -43,7 +45,7 @@ const TeachingExperience = () => {
                             }
                         </div>
                     </div>
-                    <img src="https://s.udemycdn.com/instructor/onboarding/share.jpg" alt="experience" style={{width:"330px"}} />
+                    <img src="https://s.udemycdn.com/instructor/onboarding/create.jpg" alt="experience" style={{width:"330px"}} />
                 </div>
             </div>
         </div>
@@ -52,4 +54,4 @@ const TeachingExperience = () => {
 
 
 
-export default TeachingExperience
+export default VideoExperience

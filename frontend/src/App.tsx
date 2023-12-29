@@ -7,8 +7,9 @@ import {
   Cart,
   Login,
   Register,
-  Teaching,
-  User
+  TeachingExperience,
+  User,
+  OnBoardingLayout,
 } from "./screens";
 import ProtectRoute from "./utils/ProtectRoute";
 import Preloader from "./components/loaders/preloader";
@@ -34,10 +35,14 @@ export default function App() {
           </Suspense>
           }
           />
-          <Route path={'user/:name'} element={<User />}/>
+          <Route path={'user/:name'} element={
+           <ProtectRoute>
+              <User />
+            </ProtectRoute>
+          } />
           <Route path={'teaching/'} element={<Suspense fallback={<LazyLoader />}>
             <ProtectRoute>
-              <Teaching />
+              <TeachingExperience />
             </ProtectRoute>
           </Suspense>
           }
@@ -60,6 +65,14 @@ export default function App() {
           </Suspense>
           }
           />
+        </Route>
+
+        <Route path={"/home/teaching/onboarding/"} element={<OnBoardingLayout />}>
+          <Route path={'teaching-experience'} element={
+            <ProtectRoute>
+              <TeachingExperience />
+            </ProtectRoute>
+          } />
         </Route>
 
       </Routes>

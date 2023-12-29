@@ -7,15 +7,18 @@ const Cart = lazy(() => import("./Cart"));
 const Login = lazy(() => import("./Login"));
 const Register = lazy(() => import("./Register"));
 import User from './User'
+import TeachingExperience from './onBoarding/Teaching'
 import LayoutIndex from './Layout'
+import OnBoardingLayout from './OnBoardingLayout'
 export {
     Home,
     LayoutIndex,
     Cart,
     Login,
     Register,
-    Teaching,
-    User
+    User,
+    OnBoardingLayout,
+    TeachingExperience
     // SingleIndex,
     // ShopIndex
 }

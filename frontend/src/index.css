@@ -595,7 +595,7 @@ html {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 780px) {
   h1 {
     font-size: 6rem;
     line-height: 50px;
@@ -623,6 +623,9 @@ html {
     width: 100%;
   }
   .w-85 {
+    width: 90%;
+  }
+  .w-50 {
     width: 90%;
   }
 }

@@ -130,15 +130,27 @@ export default function App() {
             </ProtectRoute>
           } />
 
-          <Route path={'2'} element={
+          <Route path={'messages'} element={
             <ProtectRoute>
-              <CourseCreationStep2 />
+              <Messages />
             </ProtectRoute>
           } />
 
-          <Route path={'3'} element={
+          <Route path={'overview'} element={
             <ProtectRoute>
-              <CourseCreationStep3 />
+              <Overview />
+            </ProtectRoute>
+          } />
+
+          <Route path={'reviews'} element={
+            <ProtectRoute>
+              <Reviews />
+            </ProtectRoute>
+          } />
+
+          <Route path={'students'} element={
+            <ProtectRoute>
+              <Students />
             </ProtectRoute>
           } />
         </Route>

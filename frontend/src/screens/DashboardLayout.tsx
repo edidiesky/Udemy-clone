@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import DashboardSidebar from "../components/common/dashboardSidebar";
+import DashboardHeader from "../components/common/dashboardHeader";
 // import { Header, Smallsidebar } from "../components";
 // import Sidebar from "./Sidebar";
 const LayoutWrapper = styled.div`
@@ -13,7 +14,7 @@ const LayoutWrapper = styled.div`
     width: 100%;
     .OutletWrapper {
       overflow: auto;
-      height: calc(100vh - 7rem);
+      height: calc(100vh);
       align-items: flex-start;
       border-right: 1px solid rgba(0, 0, 0, 0.1);
       width: auto;
@@ -25,7 +26,7 @@ const LayoutWrapper = styled.div`
         height: 100%;
         position: sticky;
         overflow: auto;
-        width: 280px;
+        min-width: 80px;
       }
     }
   }
@@ -37,21 +38,22 @@ const LayoutWrapper = styled.div`
 `;
 
 export default function Layout() {
-    return (
-        <LayoutWrapper>
-            {/* <Sidebar /> */}
-            {/* <Smallsidebar /> */}
-            <div className="LayoutContainer flex column">
-                {/* <Header /> */}
-                <div className="OutletWrapper flex">
-                    <div className="sidebar_wrapper">
-                        <DashboardSidebar />
-                    </div>
-                    <div className="w-100">
-                        <Outlet />
-                    </div>
-                </div>
-            </div>
-        </LayoutWrapper>
-    );
+  return (
+    <LayoutWrapper>
+      {/* <Sidebar /> */}
+      {/* <Smallsidebar /> */}
+      <div className="LayoutContainer flex column">
+        {/* <Header /> */}
+        <div className="OutletWrapper flex">
+          <div className="sidebar_wrapper">
+            <DashboardSidebar />
+          </div>
+          <div className="w-100 flex column gap-4">
+            <DashboardHeader />
+            <Outlet />
+          </div>
+        </div>
+      </div>
+    </LayoutWrapper>
+  );
 }

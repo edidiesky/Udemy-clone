@@ -15,7 +15,14 @@ import {
   CourseCreationStep1,
   CourseCreationLayout,
   CourseCreationStep2,
-  CourseCreationStep3
+  CourseCreationStep3,
+
+  DashboardLayout,
+  Courses,
+  Overview,
+  Students,
+  Reviews,
+  Messages
 } from "./screens";
 import ProtectRoute from "./utils/ProtectRoute";
 import Preloader from "./components/loaders/preloader";
@@ -98,6 +105,28 @@ export default function App() {
           <Route path={'1'} element={
             <ProtectRoute>
               <CourseCreationStep1 />
+            </ProtectRoute>
+          } />
+
+          <Route path={'2'} element={
+            <ProtectRoute>
+              <CourseCreationStep2 />
+            </ProtectRoute>
+          } />
+
+          <Route path={'3'} element={
+            <ProtectRoute>
+              <CourseCreationStep3 />
+            </ProtectRoute>
+          } />
+        </Route>
+
+        {/* Dashboard */}
+
+        <Route path={"/instructor"} element={<DashboardLayout />}>
+          <Route index element={
+            <ProtectRoute>
+              <Courses />
             </ProtectRoute>
           } />
 
